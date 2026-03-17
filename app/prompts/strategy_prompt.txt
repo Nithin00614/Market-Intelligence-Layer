@@ -1,0 +1,10 @@
+
+    Based on the following market analysis for {company}, generate a market insight report.
+
+    Analysis:
+    {analysis}
+
+    Provide:
+    - Market outlook
+    - Opportunities
+    - Risks

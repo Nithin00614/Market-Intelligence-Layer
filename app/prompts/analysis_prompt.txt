@@ -1,0 +1,12 @@
+Analyze the market position of {company}.
+
+News Headlines:
+{news}
+
+Financial Data:
+{financial_data}
+
+Market Knowledge:
+{knowledge}
+
+Provide a short analysis of market trends.
