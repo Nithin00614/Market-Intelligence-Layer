@@ -1,5 +1,10 @@
 # 🚀 Market Intelligence Multi-Agent System
 
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![LLM](https://img.shields.io/badge/LLM-OpenAI-orange)
+![LangGraph](https://img.shields.io/badge/LangGraph-MultiAgent-purple)
+
 An industry-aligned **LLM-powered multi-agent system** that generates structured **market intelligence reports** by combining:
 
 - Real-time news
