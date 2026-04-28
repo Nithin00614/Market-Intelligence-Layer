@@ -28,7 +28,7 @@ Given a company name, the system:
 
 UI → FastAPI → LangGraph → Agents → LLM → Response
 
- ➡️ Refer to: [system_design.md](system_design.md)
+ ➡️ For detailed architecture, Refer to: [system_design.md](system_design.md)
 
 ---
 
@@ -67,6 +67,7 @@ system_design.md
 1. Clone repo
 
 git clone https://github.com/Nithin00614/Market-Intelligence-Layer
+
 cd Market-intelligence-agent
 
 2. Setup environment
