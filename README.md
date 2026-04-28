@@ -1,15 +1,15 @@
 ### 🚀 AI Market Intelligence System
 
-"Python" (https://img.shields.io/badge/Python-3.10+-blue)
-"FastAPI" (https://img.shields.io/badge/FastAPI-Backend-green)
-"LangGraph" (https://img.shields.io/badge/LangGraph-Orchestration-purple)
-"LLM" (https://img.shields.io/badge/LLM-Groq-orange)
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![LLM](https://img.shields.io/badge/LLM-OpenAI-orange)
+![LangGraph](https://img.shields.io/badge/LangGraph-MultiAgent-purple)
 
 An LLM-powered multi-agent system that generates structured market intelligence reports by combining real-time data, financial metrics, and retrieval-augmented knowledge.
 
 ---
 
-🧠 What it does
+## 🧠 What it does
 
 Given a company name, the system:
 
@@ -24,15 +24,15 @@ Given a company name, the system:
 
 ---
 
-⚙️ Architecture (Simplified)
+## ⚙️ Architecture (Simplified)
 
 UI → FastAPI → LangGraph → Agents → LLM → Response
 
-➡️ Full design: "system_design.md" (system_design.md)
+ ➡️ Refer to: [system_design.md](system_design.md)
 
 ---
 
-🧩 Tech Stack
+## 🧩 Tech Stack
 
 - Backend: FastAPI
 - Orchestration: LangGraph
@@ -43,7 +43,7 @@ UI → FastAPI → LangGraph → Agents → LLM → Response
 
 ---
 
-📁 Project Structure
+## 📁 Project Structure
 
 app/
 ├── agents/
@@ -59,7 +59,7 @@ system_design.md
 
 ---
 
-🚀 Getting Started
+## 🚀 Getting Started
 
 1. Clone repo
 
@@ -85,6 +85,8 @@ Create ".env" file:
 
 GROQ_API_KEY=your_api_key
 MODEL_NAME=llama3-8b-8192
+NEWS_API_KEY = your_api_key
+FINANCIAL_API_KEY = your_api_key
 
 5. Run backend
 
