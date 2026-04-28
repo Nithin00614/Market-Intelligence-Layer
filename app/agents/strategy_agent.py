@@ -8,29 +8,23 @@ import json
 def calculate_confidence(news, financial_data, analysis):
     score = 0
 
-    # News contribution (0–30)
-    if news and "No recent" not in str(news[0]):
+    # ---------------- NEWS QUALITY ----------------
+    if news and "No recent" not in str(news):
         score += min(len(news) * 5, 30)
-    else:
-        score += 5  # minimal confidence
 
-    # Financial data quality (0–40)
-    if financial_data:
-        if financial_data.get("revenue_growth"):
-            score += 15
-        if financial_data.get("profit_margin"):
-            score += 15
-        if financial_data.get("pe_ratio"):
-            score += 10
+    # ---------------- FINANCIAL DATA QUALITY ----------------
+    valid_fields = [v for v in financial_data.values() if v not in [None, 0, "N/A"]]
+    score += min(len(valid_fields) * 8, 40)
 
-    # Analysis completeness (0–30)
-    if analysis:
-        if analysis.get("summary") and analysis["summary"] != "N/A":
-            score += 10
-        if analysis.get("key_risks"):
-            score += 10
-        if analysis.get("opportunities"):
-            score += 10
+    # ---------------- ANALYSIS QUALITY ----------------
+    if analysis.get("summary") not in ["", "N/A"]:
+        score += 10
+
+    if analysis.get("key_risks"):
+        score += 10
+
+    if analysis.get("opportunities"):
+        score += 10
 
     return min(score, 100)
 

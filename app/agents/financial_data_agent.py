@@ -1,5 +1,4 @@
 from app.tools.financial_api_tool import fetch_financial_data
-
 COMPANY_SYMBOL_MAP = {
         "apple": "AAPL",
         "tesla": "TSLA",
@@ -16,6 +15,7 @@ def financial_data_agent(state):
         financial_data = fetch_financial_data(company)
     except Exception as e:
         financial_data = {"error": str(e)}
+
 
     state["financial_data"] = financial_data or {}
     return state

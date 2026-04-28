@@ -1,7 +1,6 @@
 from app.tools.news_api_tool import fetch_news
 from datetime import datetime, timedelta
 
-
 # Trusted sources with credibility scores
 TRUSTED_SOURCES = {
     "reuters": 0.95,
@@ -29,9 +28,7 @@ def is_recent(published_at: str, days: int = 7) -> bool:
 
 def news_agent(state):
     company = state["company"]
-
     raw_news = fetch_news(company)
-
     processed_news = []
 
     for article in raw_news:

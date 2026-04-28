@@ -1,185 +1,144 @@
-# 🚀 Market Intelligence Multi-Agent System
+### 🚀 AI Market Intelligence System
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
-![LLM](https://img.shields.io/badge/LLM-OpenAI-orange)
-![LangGraph](https://img.shields.io/badge/LangGraph-MultiAgent-purple)
+"Python" (https://img.shields.io/badge/Python-3.10+-blue)
+"FastAPI" (https://img.shields.io/badge/FastAPI-Backend-green)
+"LangGraph" (https://img.shields.io/badge/LangGraph-Orchestration-purple)
+"LLM" (https://img.shields.io/badge/LLM-Groq-orange)
 
-An industry-aligned **LLM-powered multi-agent system** that generates structured **market intelligence reports** by combining:
-
-- Real-time news
-- Financial data
-- Retrieval-Augmented Knowledge (RAG)
-- LLM-based reasoning
+An LLM-powered multi-agent system that generates structured market intelligence reports by combining real-time data, financial metrics, and retrieval-augmented knowledge.
 
 ---
 
-## 🧠 Overview
+🧠 What it does
 
-This project demonstrates a **production-style AI system design** using:
+Given a company name, the system:
 
-- Multi-agent architecture  
-- LangGraph orchestration  
-- Tool-augmented LLM reasoning  
-
-The system takes a **company name as input** and generates a **market insight report**.
-
----
-
-## ⚙️ Architecture
-
-User → FastAPI → LangGraph → Agents → LLM → Response  
-
-### Workflow
-
-1. Coordinator agent decides tool usage  
-2. News agent fetches latest news  
-3. Financial agent retrieves financial data  
-4. Vector retrieval (FAISS) fetches relevant knowledge  
-5. Analysis agent performs reasoning  
-6. Strategy agent generates final report  
+- Fetches real-time news
+- Retrieves financial metrics
+- Augments context using RAG (FAISS)
+- Applies LLM reasoning
+- Generates:
+  - Market summary
+  - Risks & opportunities
+  - Investment strategy + confidence
 
 ---
 
-## 🧩 Tech Stack
+⚙️ Architecture (Simplified)
 
-- FastAPI  
-- LangGraph  
-- Groq (LLM)  
-- HuggingFace Embeddings  
-- FAISS (Vector DB)  
-- Docker  
+UI → FastAPI → LangGraph → Agents → LLM → Response
+
+➡️ Full design: "system_design.md" (system_design.md)
 
 ---
 
-## 📁 Project Structure
+🧩 Tech Stack
 
-app/  
-├── agents/  
-├── api/  
-├── config/  
-├── prompts/  
-├── schemas/  
-├── services/  
-├── tools/  
-├── workflows/  
-└── main.py  
-
-data/  
-docker/
-system_design.md   
+- Backend: FastAPI
+- Orchestration: LangGraph
+- LLM: Groq (LLaMA3)
+- Embeddings: HuggingFace
+- Vector DB: FAISS
+- Frontend: Streamlit
 
 ---
 
-## 🔍 Key Features
+📁 Project Structure
 
-- Multi-agent orchestration using LangGraph  
-- Tool-based reasoning (news + financial data)  
-- Retrieval-Augmented Generation (RAG)  
-- Modular and scalable architecture  
-- Prompt-driven LLM workflows  
+app/
+├── agents/
+├── api/
+├── prompts/
+├── services/
+├── tools/
+├── workflows/
+└── main.py
 
----
-
-## 🏗️ System Design
-
-For detailed architecture, data flow, and design decisions:
-
-➡️ Refer to: [system_design.md](system_design.md)
+data/
+system_design.md
 
 ---
 
-## 🚀 Getting Started
+🚀 Getting Started
 
-### 1. Clone the repository
+1. Clone repo
 
-git clone <your-repo-url>  
-cd market-intelligence-agent  
+git clone https://github.com/Nithin00614/Market-Intelligence-Layer
+cd Market-intelligence-agent
 
----
+2. Setup environment
 
-### 2. Create virtual environment
+python -m venv venv
 
-python -m venv venv  
+Activate:
 
-Windows:  
-venv\Scripts\activate  
+- Windows → "venv\Scripts\activate"
+- Mac/Linux → "source venv/bin/activate"
 
-Linux/Mac:  
-source venv/bin/activate  
+3. Install dependencies
 
----
+pip install -r requirements.txt
 
-### 3. Install dependencies
+4. Configure environment variables
 
-pip install -r requirements.txt  
+Create ".env" file:
 
----
+GROQ_API_KEY=your_api_key
+MODEL_NAME=llama3-8b-8192
 
-### 4. Setup environment variables
+5. Run backend
 
-Create a `.env` file:
+uvicorn app.main:app --reload
 
-GROQ_API_KEY=your_api_key  
-MODEL_NAME=llama3-8b-8192  
+6. Run UI
 
----
-
-### 5. Run the application
-
-uvicorn app.main:app --reload  
+streamlit run app.py
 
 ---
 
-### 6. Test API
-
-Open:  
-http://127.0.0.1:8000/docs  
-
----
-
-## 📤 Example Input
+📤 Example Request
 
 {
   "company": "Apple",
-  "question": "Analyze market outlook"
+  "question": "Analyze market position"
 }
 
 ---
 
-## 📈 Example Output
+📈 Example Output
 
 {
-  "analysis": "...",
-  "final_report": {
-    "market_outlook": "...",
-    "opportunities": "...",
-    "risks": "..."
+  "analysis": {
+    "summary": "...",
+    "key_risks": [...],
+    "opportunities": [...]
+  },
+  "strategy": {
+    "decision": "Hold",
+    "confidence": "High"
   }
 }
 
 ---
 
-## ⚠️ Limitations
+⚠️ Limitations
 
-- Depends on external APIs for news and financial data  
-- LLM responses may vary based on prompts and model behavior  
-- Not optimized for large-scale production deployment  
-
----
-
-## 🎯 What This Project Demonstrates
-
-- Multi-agent AI system design  
-- LLM orchestration using LangGraph  
-- Practical application of RAG  
-- Clean and modular backend architecture  
+- Relies on external APIs (latency dependent)
+- LLM outputs are probabilistic
+- FAISS is not distributed (local setup)
 
 ---
 
-## 👨‍💻 Author
+🎯 Key Highlights
 
-Nithin Gowda P  
-Aspiring AI/ML Engineer  
+- Multi-agent AI system using LangGraph
+- Tool-augmented LLM reasoning
+- Retrieval-Augmented Generation (RAG)
+- Modular, production-style architecture
 
 ---
+
+👨‍💻 Author
+
+Nithin Gowda P
+Aspiring AI/ML Engineer
