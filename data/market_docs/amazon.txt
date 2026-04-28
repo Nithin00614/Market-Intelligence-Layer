@@ -1,22 +1,30 @@
+[SECTION: COMPANY_OVERVIEW]
 Amazon is a global e-commerce and cloud computing company.
 
-Key Products:
+[SECTION: BUSINESS_MODEL]
 - E-commerce marketplace
-- AWS (Amazon Web Services)
-- Prime subscription services
+- AWS cloud services (major profit driver)
+- Subscription (Prime)
 
-Revenue Model:
-- E-commerce sales
-- Cloud services (AWS)
-- Advertising
+[SECTION: REVENUE]
+- Online retail (high volume, low margin)
+- AWS (high margin)
+- Advertising (growing)
 
-Market Position:
-Dominates cloud computing and online retail markets.
-
-Recent Strategy:
-- Expansion in AI cloud services
+[SECTION: STRATEGY]
+- Expansion of AWS
 - Logistics optimization
-- Automation in warehouses
+- AI integration in cloud services
 
-Competitors:
-Microsoft Azure, Google Cloud, Walmart
+[SECTION: RISKS]
+- Regulatory scrutiny
+- Thin retail margins
+- Competition in cloud (Azure, Google Cloud)
+
+[SECTION: OPPORTUNITIES]
+- Cloud dominance
+- AI services growth
+- Global e-commerce expansion
+
+[SECTION: COMPETITION]
+Microsoft, Google, Walmart

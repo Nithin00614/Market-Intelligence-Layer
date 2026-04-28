@@ -1,22 +1,31 @@
+[SECTION: COMPANY_OVERVIEW]
 Apple is a global technology company focused on premium consumer electronics and ecosystem services.
 
-Key Products:
-- iPhone (major revenue contributor)
-- Mac and iPad
-- Apple Watch and wearables
-- Services like iCloud, Apple Music, App Store
+[SECTION: PRODUCTS]
+iPhone is Apple's primary revenue driver.
+Mac and iPad serve productivity markets.
+Wearables include Apple Watch and AirPods.
 
-Revenue Model:
-- Hardware sales (primary)
-- Subscription services (growing segment)
+[SECTION: REVENUE]
+Revenue comes from:
+- Hardware sales (major portion)
+- Services like iCloud, App Store, Apple Music (fast-growing)
 
-Market Position:
-Apple is positioned in the premium segment with strong brand loyalty and ecosystem lock-in.
+[SECTION: STRATEGY]
+Apple focuses on:
+- AI integration in devices
+- Expanding services ecosystem
+- Privacy and security differentiation
 
-Recent Strategy:
-- Expanding AI features in devices
-- Increasing services revenue
-- Focus on privacy and security
+[SECTION: RISKS]
+- Supply chain dependency (China)
+- Regulatory pressure
+- High product pricing limits market expansion
 
-Competitors:
+[SECTION: OPPORTUNITIES]
+- AI-powered devices
+- Services growth
+- Expansion in emerging markets
+
+[SECTION: COMPETITION]
 Samsung, Google, Microsoft

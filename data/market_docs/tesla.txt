@@ -1,21 +1,30 @@
+[SECTION: COMPANY_OVERVIEW]
 Tesla is an electric vehicle and clean energy company.
 
-Key Products:
-- Electric vehicles (Model 3, Model Y)
-- Energy storage solutions
-- Autonomous driving software
+[SECTION: BUSINESS_MODEL]
+- EV sales
+- Energy storage
+- Software (FSD)
 
-Revenue Model:
-- Vehicle sales
-- Software upgrades (FSD)
+[SECTION: REVENUE]
+- Vehicle sales (primary)
 - Energy products
+- Software upgrades
 
-Market Position:
-Tesla is a leader in EV innovation and autonomous driving.
+[SECTION: STRATEGY]
+- EV expansion globally
+- Autonomous driving
+- Battery innovation
 
-Recent Strategy:
-- Expanding global manufacturing
-- Focus on AI-driven self-driving systems
+[SECTION: RISKS]
+- High competition in EV market
+- Regulatory challenges
+- Execution risks in autonomy
 
-Competitors:
-BYD, Ford, Volkswagen
+[SECTION: OPPORTUNITIES]
+- EV adoption growth
+- Autonomous vehicles
+- Energy storage market
+
+[SECTION: COMPETITION]
+BYD, Ford, Rivian

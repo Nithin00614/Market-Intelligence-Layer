@@ -1,22 +1,30 @@
-Google is a global technology company specializing in search, advertising, and AI.
+[SECTION: COMPANY_OVERVIEW]
+Google (Alphabet) is a global technology company focused on search, ads, and cloud computing.
 
-Key Products:
-- Google Search
-- YouTube
+[SECTION: BUSINESS_MODEL]
+- Advertising (major revenue)
 - Google Cloud
-- Android ecosystem
+- YouTube and subscriptions
 
-Revenue Model:
-- Advertising (primary)
-- Cloud services
-- Subscriptions
+[SECTION: REVENUE]
+- Ads (primary)
+- Cloud (fast growing)
+- Hardware (minor)
 
-Market Position:
-Leader in search and digital advertising.
+[SECTION: STRATEGY]
+- AI-first approach
+- Cloud expansion
+- YouTube monetization
 
-Recent Strategy:
-- Investment in generative AI (Gemini)
-- Expansion of cloud AI services
+[SECTION: RISKS]
+- Ad dependency
+- Regulatory pressure
+- AI competition
 
-Competitors:
+[SECTION: OPPORTUNITIES]
+- AI leadership
+- Cloud growth
+- YouTube expansion
+
+[SECTION: COMPETITION]
 Microsoft, Amazon, Meta

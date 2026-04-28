@@ -18,3 +18,4 @@ def analyze_market(request: MarketRequest):
     result = graph.invoke(state)
 
     return result
+

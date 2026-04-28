@@ -1,28 +1,29 @@
-import requests
-from app.config.settings import settings
+import yfinance as yf
 
-def fetch_financial_data(company):
+def fetch_financial_data(company: str):
+    try:
+        ticker_map = {
+            "apple": "AAPL",
+            "tesla": "TSLA",
+            "amazon": "AMZN",
+            "google": "GOOGL",
+            "nvidia": "NVDA"
+        }
 
-    url = f"https://financialmodelingprep.com/api/v3/profile/{company}?apikey={settings.FINANCIAL_API_KEY}"
 
-    response = requests.get(url)
+        ticker = ticker_map.get(company.lower(), company)
 
-    data = response.json()
+        stock = yf.Ticker(ticker)
+        info = stock.info
 
-    # Handle error responses or empty lists
-    if isinstance(data, dict) and "error" in data:
-        return {"error": data.get("error", "Unknown error")}
-    
-    if not isinstance(data, list) or len(data) == 0:
-        return {}
+        return {
+            "company": ticker,
+            "price": info.get("currentPrice") or "N/A",
+            "market_cap": info.get("marketCap") or "N/A",
+            "pe_ratio": info.get("trailingPE") or "N/A",
+            "revenue_growth": info.get("revenueGrowth") or "N/A",
+            "profit_margin": info.get("profitMargins") or "N/A"
+        }
 
-    profile = data[0]
-
-    # Safely extract fields with defaults
-    return {
-        "company": profile.get("companyName", "N/A"),
-        "price": profile.get("price", 0),
-        "market_cap": profile.get("mktCap", "N/A"),
-        "sector": profile.get("sector", "N/A")
-    }
-
+    except Exception as e:
+        return {"error": str(e)}

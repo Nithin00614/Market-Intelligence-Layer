@@ -1,22 +1,44 @@
 import requests
 from app.config.settings import settings
 
-def fetch_news(company):
+def fetch_news(company: str):
+    try:
+        url = "https://newsapi.org/v2/everything"
 
-    url = f"https://newsapi.org/v2/everything?q={company}&apiKey={settings.NEWS_API_KEY}"
+        params = {
+            "q": f"{company} stock OR {company} earnings OR {company} business",
+            "apiKey": settings.NEWS_API_KEY,
+            "pageSize": 5,
+            "sortBy": "publishedAt",
+            "language": "en"
+        }
 
-    response = requests.get(url)
+        response = requests.get(url, params=params)
 
-    data = response.json()
+        if response.status_code != 200:
+            return {"error": f"News API failed with status {response.status_code}"}
 
-    # Handle error responses
-    if not data.get("articles"):
-        return []
+        data = response.json()
 
-    articles = []
+        if data.get("status") != "ok":
+            return {"error": data}
 
-    for article in data["articles"][:5]:
-        title = article.get("title", "No title")
-        articles.append(title)
+        articles = []
 
-    return articles
+        for article in data.get("articles", []):
+            title = article.get("title", "").lower()
+
+            if company.lower() not in title:
+                continue
+
+            articles.append({
+                "title": article.get("title"),
+                "source": article.get("source", {}).get("name"),
+                "url": article.get("url"),
+                "published_at": article.get("publishedAt")
+            })
+
+        return articles[:5]
+
+    except Exception as e:
+        return {"error": str(e)}

@@ -1,10 +1,16 @@
+You are a financial strategy advisor.
 
-    Based on the following market analysis for {company}, generate a market insight report.
+Based on the analysis below:
 
-    Analysis:
-    {analysis}
+{analysis}
 
-    Provide:
-    - Market outlook
-    - Opportunities
-    - Risks
+Provide investment strategy and recommendations.
+
+Return ONLY JSON:
+
+{{
+  "decision": "Buy/Hold/Sell",
+  "reason": "Short explanation based on data",
+  "risks": ["..."],
+  "opportunities": ["..."]
+}}

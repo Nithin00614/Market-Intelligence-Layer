@@ -1,21 +1,30 @@
-Nvidia is a leading semiconductor company specializing in GPUs and AI hardware.
+[SECTION: COMPANY_OVERVIEW]
+NVIDIA is a leading semiconductor company specializing in GPUs and AI computing.
 
-Key Products:
-- GPUs for gaming and AI
-- Data center GPUs (A100, H100)
-- AI infrastructure and CUDA ecosystem
+[SECTION: BUSINESS_MODEL]
+- GPU sales
+- Data center AI chips
+- Gaming hardware
 
-Revenue Model:
-- Data center (AI workloads)
+[SECTION: REVENUE]
+- Data center (major growth driver)
 - Gaming GPUs
-- Enterprise AI solutions
+- AI infrastructure
 
-Market Position:
-Nvidia dominates the AI hardware market with strong developer ecosystem.
+[SECTION: STRATEGY]
+- AI hardware dominance
+- Expansion into enterprise AI
+- Partnerships with cloud providers
 
-Recent Strategy:
-- Focus on generative AI infrastructure
-- Partnerships with cloud providers (AWS, Azure, Google Cloud)
+[SECTION: RISKS]
+- High valuation
+- Chip supply constraints
+- Competition (AMD, Intel)
 
-Competitors:
-AMD, Intel
+[SECTION: OPPORTUNITIES]
+- AI boom
+- Data center expansion
+- Autonomous systems
+
+[SECTION: COMPETITION]
+AMD, Intel, Google (TPUs)
