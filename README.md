@@ -45,17 +45,20 @@ UI → FastAPI → LangGraph → Agents → LLM → Response
 
 ## 📁 Project Structure
 
-app/
-├── agents/
-├── api/
-├── prompts/
-├── services/
-├── tools/
-├── workflows/
-└── main.py
+app/  
+├── agents/  
+├── api/  
+├── config/  
+├── prompts/  
+├── schemas/  
+├── services/  
+├── tools/  
+├── workflows/  
+└── main.py  
 
-data/
-system_design.md
+data/  
+docker/
+system_design.md   
 
 ---
 
