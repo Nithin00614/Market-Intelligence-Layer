@@ -28,7 +28,8 @@ Given a company name, the system:
 
 UI → FastAPI → LangGraph → Agents → LLM → Response
 
- ➡️ For detailed architecture, Refer to: [system_design.md](system_design.md)
+ ➡️ For detailed architecture, design, tradeoffs :
+ - Refer to: [system_design.md](system_design.md)
 
 ---
 
@@ -87,10 +88,10 @@ pip install -r requirements.txt
 
 Create ".env" file:
 
-GROQ_API_KEY=your_api_key
-MODEL_NAME=llama3-8b-8192
-NEWS_API_KEY = your_api_key
-FINANCIAL_API_KEY = your_api_key
+- GROQ_API_KEY=your_api_key
+- MODEL_NAME=llama3-8b-8192
+- NEWS_API_KEY = your_api_key
+- FINANCIAL_API_KEY = your_api_key
 
 5. Run backend
 
@@ -143,8 +144,3 @@ streamlit run app.py
 - Modular, production-style architecture
 
 ---
-
-👨‍💻 Author
-
-Nithin Gowda P
-Aspiring AI/ML Engineer
